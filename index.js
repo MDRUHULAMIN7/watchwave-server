@@ -44,15 +44,7 @@ app.get("/seracproducts",async(req,res)=>{
 
   res.send(result)
 })
-app.get("/seracproducts",async(req,res)=>{
-  const name = req.query.name;  
-  let query={
-    productName:{$regex:name,$options:'i'},
-  }
-  const result= await productsCollection.find(query).toArray();
 
-  res.send(result)
-})
 
 // date 1
 
